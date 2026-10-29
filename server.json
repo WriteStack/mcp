@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.writestack/mcp",
+  "title": "WriteStack",
+  "description": "Connect Claude, ChatGPT, Notion, or any MCP client to a writer's WriteStack account. Draft and schedule Substack Notes, manage articles, and read statistics.",
+  "websiteUrl": "https://www.writestack.io/mcp",
+  "repository": {
+    "url": "https://github.com/WriteStack/mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.writestack.io/api/mcp/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token from WriteStack OAuth or an API key created in Settings → MCP (ws_…).",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
